@@ -2,7 +2,7 @@
 
 return array
 (
-	'default' => array(
+	'defaultPDO' => array(
 		'type'       => 'PDO',
 		'connection' => array(
 			/**
@@ -26,5 +26,22 @@ return array
 		'table_prefix' => '',
 		'charset'      => 'utf8',
 		'caching'      => FALSE,
+	),
+
+
+	// ------------
+
+	'default' => array(
+		'type'       => 'MySQL',
+		'connection' => array(
+		'host'       => 'localhost',
+		'username'   => 'root',
+		'password'   => 'root',
+		'database'   => 'cygnus',
+		'persistent' => FALSE,
+	),
+	'table_prefix' => '',
+	'charset'      => 'utf8',
+	'caching'      => FALSE,
 	),
 );
