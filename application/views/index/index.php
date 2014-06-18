@@ -1,6 +1,8 @@
 
 <p>Welcome here, endeavour!</p>
 
+<?php if ($logged): ?>
+
 <p>Upload your file here:</p>
 <div id="uploader">
   <form id="frmUpload" action="<?php echo url::base(); ?>upload" method="post" enctype="multipart/form-data">
@@ -9,3 +11,6 @@
   </form>
 </div>
 
+<?php else: ?>
+  <?php echo View::factory('index/login'); ?>
+<?php endif; ?>
